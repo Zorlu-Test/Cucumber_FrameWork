@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>01 Mar 2023, 18:41</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Api_Factorial_Steps.iPostTheNumber(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="252651091">0.252</td>
+              <td class="duration" data-value="252651091">0.782</td>
+              <td class="duration" data-value="3031813100">3.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Api_Factorial_Steps.respondBodyAnswerExpectedResult()</td>
+              <td>12</td>
+              <td class="duration" data-value="31745700">0.031</td>
+              <td class="duration" data-value="31745700">0.315</td>
+              <td class="duration" data-value="380948400">0.380</td>
+              <td class="failed">58.33%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Api_Factorial_Steps.theHeaderContainsDate()</td>
+              <td>12</td>
+              <td class="duration" data-value="375875">0.000</td>
+              <td class="duration" data-value="375875">0.002</td>
+              <td class="duration" data-value="4510500">0.004</td>
+              <td class="failed">58.33%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Api_Factorial_Steps.theResponseContentTypeShouldBe(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="644708">0.000</td>
+              <td class="duration" data-value="644708">0.004</td>
+              <td class="duration" data-value="7736500">0.007</td>
+              <td class="failed">83.33%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Api_Factorial_Steps.verifyStatusCodeShouldBe(int)</td>
+              <td>12</td>
+              <td class="duration" data-value="5223316">0.005</td>
+              <td class="duration" data-value="5223316">0.046</td>
+              <td class="duration" data-value="62679800">0.062</td>
+              <td class="failed">83.33%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iAmOnTheWebsite()</td>
+              <td>27</td>
+              <td class="duration" data-value="1248105144">1.248</td>
+              <td class="duration" data-value="1248105144">1.514</td>
+              <td class="duration" data-value="33698838900">33.698</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iEnterAnInvalidInput(java.lang.String)</td>
+              <td>13</td>
+              <td class="duration" data-value="98220484">0.098</td>
+              <td class="duration" data-value="98220484">0.120</td>
+              <td class="duration" data-value="1276866300">1.276</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iInputTheNumber(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="88544283">0.088</td>
+              <td class="duration" data-value="88544283">0.095</td>
+              <td class="duration" data-value="1062531400">1.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iInputTheNumberAndClickOnCalculate(long)</td>
+              <td>1</td>
+              <td class="duration" data-value="87829300">0.087</td>
+              <td class="duration" data-value="87829300">0.087</td>
+              <td class="duration" data-value="87829300">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iInputTheNumberAndPressEnter(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="64384500">0.064</td>
+              <td class="duration" data-value="64384500">0.064</td>
+              <td class="duration" data-value="64384500">0.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iShouldSeeExpectedResult()</td>
+              <td>12</td>
+              <td class="duration" data-value="1314700483">1.314</td>
+              <td class="duration" data-value="1314700483">5.165</td>
+              <td class="duration" data-value="15776405800">15.776</td>
+              <td class="failed">58.33%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iShouldSeeTheRedFormValidationStyling()</td>
+              <td>13</td>
+              <td class="duration" data-value="15529692">0.015</td>
+              <td class="duration" data-value="15529692">0.020</td>
+              <td class="duration" data-value="201886000">0.201</td>
+              <td class="failed">92.31%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.iShouldSeeTheResult(long)</td>
+              <td>1</td>
+              <td class="duration" data-value="553202200">0.553</td>
+              <td class="duration" data-value="553202200">0.553</td>
+              <td class="duration" data-value="553202200">0.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Factorial_Steps.verifyTheNumberCalculated()</td>
+              <td>1</td>
+              <td class="duration" data-value="5159246800">5.159</td>
+              <td class="duration" data-value="5159246800">5.159</td>
+              <td class="duration" data-value="5159246800">5.159</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Hooks.sutUP()</td>
+              <td>12</td>
+              <td class="duration" data-value="28810366">0.028</td>
+              <td class="duration" data-value="28810366">0.345</td>
+              <td class="duration" data-value="345724400">0.345</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.ThinkCyberSecurity.step_Definition.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>27</td>
+              <td class="duration" data-value="564862159">0.564</td>
+              <td class="duration" data-value="564862159">0.940</td>
+              <td class="duration" data-value="15251278300">15.251</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>16</td>
+            <td>180</td>
+            <td class="duration">0.427</td>
+            <td class="duration">33.698</td>
+            <td class="duration">1:16.965</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
