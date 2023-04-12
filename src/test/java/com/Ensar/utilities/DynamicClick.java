@@ -5,6 +5,7 @@ import com.Ensar.pages.DashBoard;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.io.File;
 import java.lang.reflect.Field;
 import java.net.URL;
@@ -14,14 +15,13 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 
-
-
 public class DynamicClick {
 
     private static FindBy findBy;
 
 
     public static void clickOnElement(String webElementName) {
+        webElementName = toCamelCase(webElementName);
         List<WebElement> locators = new ArrayList<>();
 
 
@@ -56,7 +56,7 @@ public class DynamicClick {
 
     }
 
-    public static List<Class<?>> getClasses(String packageName) throws ClassNotFoundException {
+    private static List<Class<?>> getClasses(String packageName) throws ClassNotFoundException {
         List<Class<?>> classes = new ArrayList<>();
         String path = packageName.replace('.', '/');
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -83,7 +83,7 @@ public class DynamicClick {
     }
 
 
-    public static List<WebElement> annotationFieldValueFinder() {
+    private static List<WebElement> annotationFieldValueFinder() {
         String annotationValue;
         List<WebElement> webElement = new ArrayList<>();
 
@@ -98,7 +98,7 @@ public class DynamicClick {
             webElement = Driver.get().findElements(By.id(annotationValue));
         } else if (!findBy.linkText().equals("")) {
             annotationValue = findBy.linkText();
-            webElement =Driver.get().findElements(By.linkText(annotationValue));
+            webElement = Driver.get().findElements(By.linkText(annotationValue));
         } else if (!findBy.partialLinkText().equals("")) {
             annotationValue = findBy.partialLinkText();
             webElement = Driver.get().findElements(By.partialLinkText(annotationValue));
@@ -115,6 +115,52 @@ public class DynamicClick {
 
 
         return webElement;
+    }
+
+
+    private static String toCamelCase(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        StringBuilder camelCase = new StringBuilder(str.length());
+        boolean capitalizeNextChar = false;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (Character.isWhitespace(ch) || ch == '-' || ch == '_') {
+                capitalizeNextChar = true;
+            } else if (capitalizeNextChar) {
+                camelCase.append(Character.toTitleCase(ch));
+                capitalizeNextChar = false;
+            } else {
+                camelCase.append(Character.toLowerCase(ch));
+            }
+        }
+        return camelCase.toString();
+    }
+
+
+    public static WebElement webElementOfString(String webElementName) {
+        webElementName = toCamelCase(webElementName);
+        List<WebElement> locators = new ArrayList<>();
+        try {
+            List<Class<?>> classes = getClasses("com.Ensar.pages");
+            for (int i = 0; i < classes.size(); i++) {
+                Field[] fields = classes.get(i).getDeclaredFields();
+                for (Field field : fields) {
+                    if (field.getName().equals(webElementName)) {
+                        findBy = field.getAnnotation(FindBy.class);
+                        locators = annotationFieldValueFinder();
+                    }
+                }
+                if (i == classes.size() - 1 && locators.size() == 0) {
+                    System.out.println("WebElement does not exist check again dynamic class ");
+                    throw new NoSuchElementException();
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return locators.get(0);
     }
 
 

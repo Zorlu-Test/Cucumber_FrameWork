@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = "com/Ensar/step_Definition",
         dryRun = false,
-        tags = "@UI or  @API"
+        tags = ""
 )
 public class CukesRunner {
 

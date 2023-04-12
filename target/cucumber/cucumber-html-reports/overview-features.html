@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                120,
                 12,
-                9,
+                0,
+                0,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 141) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 12) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                27,
-                12
+                2,
+                0
             ],
             backgroundColor: [
                 "#00B000",
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 39) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   0,
-                   2
+                   1,
+                   0
                ],
                backgroundColor: [
                 "#00B000",
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>01 Mar 2023, 18:41</td>
+      <td>12 Apr 2023, 23:04</td>
     </tr>
   </tbody>
 </table>
@@ -323,71 +323,54 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_3434100755.html">UI Think Cyber Security tests</a></td>
+        <td class="tagname"><a href="report-feature_171627204.html">Luma searching and adding item to basket.</a></td>
 
-        <td      class="passed"    >46</td>
-        <td      class="failed"    >5</td>
-        <td     class="skipped"   >9</td>
+        <td      class="passed"    >12</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">60</td>
-
-        <td  class="passed"    >7</td>
-        <td  class="failed"    >5</td>
+        <td >0</td>
+        <td >0</td>
         <td class="total">12</td>
 
-        <td class="duration" data-value="3487688300">3.487</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_1_74542328.html">Api Think Cyber Security tests</a></td>
-
-        <td      class="passed"    >74</td>
-        <td      class="failed"    >7</td>
+        <td  class="passed"    >2</td>
         <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">81</td>
+        <td class="total">2</td>
 
-        <td  class="passed"    >20</td>
-        <td  class="failed"    >7</td>
-        <td class="total">27</td>
-
-        <td class="duration" data-value="57881191200">57.881</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="17204856100">17.204</td>
+        <td class="passed">Passed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>120</td>
       <td>12</td>
-      <td>9</td>
       <td>0</td>
       <td>0</td>
-      <td>141</td>
-
-      <td>27</td>
+      <td>0</td>
+      <td>0</td>
       <td>12</td>
-      <td>39</td>
 
-      <td class="duration">1:1.368</td>
       <td>2</td>
+      <td>0</td>
+      <td>2</td>
+
+      <td class="duration">17.204</td>
+      <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>85.11%</td>
-      <td>8.51%</td>
-      <td>6.38%</td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>69.23%</td>
-      <td>30.77%</td>
-      <td></td>
-      <td></td>
+      <td>100.00%</td>
       <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>

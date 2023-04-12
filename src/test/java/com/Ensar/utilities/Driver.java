@@ -15,15 +15,10 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
     static private WebDriver driver;
 
-
-
     private Driver() {
     }
 
     public static WebDriver get() {
-
-
-
 
         if (driver == null) {
             String browserType = ConfigurationReader.get("browser");

@@ -1,0 +1,243 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-04-12T22:04:02.623Z",
+        "line": 3,
+        "name": "As a user, I want to be able to search for items using SKU codes and add them to my basket on website.",
+        "description": "",
+        "id": "luma-searching-and-adding-item-to-basket.;as-a-user--i-want-to-be-able-to-search-for-items-using-sku-codes-and-add-them-to-my-basket-on-website.",
+        "after": [
+          {
+            "result": {
+              "duration": 158324400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.Ensar.step_Definition.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2521903300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the dashboard",
+            "match": {
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserIsOnTheDashboard()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1010737300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user searches for an item with the SKU code \"24-WB07\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24-WB07\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserSearchesForAnItemWithTheSKUCode(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 765555300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks  on the item \"Overnight Duffle\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Overnight Duffle\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserClicksIsOnTheItem(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3047158700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks on \"Add to Cart\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add to Cart\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserClickOnButton(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3049208200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user clicks on \"basket\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"basket\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserClickOnButton(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21848600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user verifies that the \"Overnight Duffle\" item is present in the basket.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Overnight Duffle\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserVerifiesThatTheItemIsPresentInTheBasket(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-04-12T22:04:13.239Z",
+        "line": 13,
+        "name": "As a user, I want to be able to search for items using SKU codes and add them to my basket on website (With out dynamic click method!).",
+        "description": "",
+        "id": "luma-searching-and-adding-item-to-basket.;as-a-user--i-want-to-be-able-to-search-for-items-using-sku-codes-and-add-them-to-my-basket-on-website-(with-out-dynamic-click-method-).",
+        "after": [
+          {
+            "result": {
+              "duration": 113218800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.Ensar.step_Definition.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1857546600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user is on the dashboard",
+            "match": {
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserIsOnTheDashboard()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 995022100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user searches for an item with the SKU code \"24-WB07\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24-WB07\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserSearchesForAnItemWithTheSKUCode(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 744032400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks  on the item Overnight Duffle",
+            "match": {
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserClicksOnTheItemOvernightDuffle()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 117246500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user clicks on Add to Cart button",
+            "match": {
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserClicksOnAddToCartButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3054651700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on basket button",
+            "match": {
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserClicksOnBasketButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19945400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user verifies that the \"Overnight Duffle\" item is present in the basket.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Overnight Duffle\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.Ensar.step_Definition.Add_Item_To_Basket.theUserVerifiesThatTheItemIsPresentInTheBasket(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Luma searching and adding item to basket.",
+    "description": "",
+    "id": "luma-searching-and-adding-item-to-basket.",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/dynamicClick.feature",
+    "tags": []
+  }
+]
