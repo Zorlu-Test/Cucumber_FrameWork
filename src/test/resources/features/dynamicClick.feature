@@ -11,7 +11,7 @@ Feature: Luma searching and adding item to basket.
  #   And the user clicks on "luma" button
  #   And the user clicks on "women" button
 
-  #Without dynamic click method!
+  # Without dynamic click method!
   Scenario:  As a user, I want to be able to search for items using SKU codes and add them to my basket on website. (classic way same scenario with)
 
     Given  the user is on the dashboard
