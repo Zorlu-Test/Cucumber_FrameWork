@@ -7,7 +7,6 @@ public class Pages {
     private DashBoard dashBoard;
     private ProductPage productPage;
     private SearchResult searchResult;
-
     public WebDriverWait wait = new WebDriverWait(Driver.get(), 10);
 
     public DashBoard dashBoard() {

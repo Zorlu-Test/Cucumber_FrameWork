@@ -2,6 +2,7 @@ package com.Ensar.utilities;
 
 
 import com.Ensar.pages.DashBoard;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -116,6 +117,7 @@ public class DynamicClick {
 
         return webElement;
     }
+
 
 
     private static String toCamelCase(String str) {

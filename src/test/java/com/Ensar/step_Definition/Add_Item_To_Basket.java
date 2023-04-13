@@ -44,7 +44,6 @@ public class Add_Item_To_Basket extends Pages {
         DynamicClick.clickOnElement(basket);
     }
 
-
     @Then("the user verifies that the {string} item is present in the basket.")
     public void theUserVerifiesThatTheItemIsPresentInTheBasket(String expectedItem){
         String addedItem = dashBoard().addedItems.get(0).getText();

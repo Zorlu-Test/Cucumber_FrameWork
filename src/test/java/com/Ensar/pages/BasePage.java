@@ -13,15 +13,11 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class BasePage {
-
-
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
-
     @FindBy(id = "search")
     public WebElement search;
-
     @FindBy(xpath = "//a[@class='action showcart']")
     public WebElement basket;
 
@@ -30,7 +26,6 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//a[@class='logo']")
     public WebElement luma; //Icon
-
     @FindBy(xpath = "//div[@data-action='scroll']//strong/a")
     public List<WebElement> addedItems;
 
